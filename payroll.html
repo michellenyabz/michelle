@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>payroll</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+  <h1 class="alert alert-primary">my payroll</h1>
+  <section class="row">
+  <div class="col-md-6">
+    <form>
+  		<input type="number"placeholder="your basic"class="form-control" id="basic"><br>
+  		<input type="number"placeholder="your water allowance"class="form-control" id="water"><br>
+  		<input type="number"placeholder="your health allowance"class="form-control" id="health"><br>
+  		<button type="button"class="btn btn-danger" onclick="computePayroll();">get your netpay </button>
+  		
+  		<div id="result"class="bg-success"></div>
+  	</form>
+  	
+  </div>
+  <div class="col-md-6">
+  <!--CREATE A web application currency from KES to
+  5 others currencies-->
+  <form>
+  	
+  </form>
+  	
+  </div>
+  	
+  </section>
+  <script type="text/javascript">
+    function computePayroll(){
+      //your logic goes here..
+      var basic=document.getElementById("basic").value;
+      var water=document.getElementById("water").value;
+      var health=document.getElementById("health").value;
+      //check if t hey are empty
+      //operators:arithmetic operators:+'-'/'*
+      //comapariosn operators:<''>''>='<=,!=
+      //logical operators:&&,||,!(not)
+      if (basic=="" || water=="" || health=="") {
+      	document.getElementById("result").innerHTML = "You must fill all fields"
+      }
+      else{
+      	//do maths
+      	var answer=(basic+water)-health;
+    
+      	var convertedbasic=parseInt(basic);
+      	var convertedwater=parseInt(water);
+      	var convertedhealth=parseInt(health);
+      	var answer=(convertedbasic+convertedwater)-convertedhealth;
+      	document.getElementById("result").innerHTML = "YOUR NETPAY WILL BE:"+answer;
+      	//
+      }
+
+
+
+    }
+
+
+
+  </script>
+</body>
+</html>

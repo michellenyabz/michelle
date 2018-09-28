@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>contact us</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"type="text/css">
+	
+</head>
+<body>
+<a href="index.html"class="btn btn-dark">back home</a>
+<section class="row">
+<div class="col-md-6">
+
+ <form>
+ <!--provie id for each element -->
+	<input type="email"placeholder="your email" class="form-control" id="email">
+	<div id="error1" class="text-danger"></div><br>
+
+	<input type="text" placeholder="your name"class="form-control" id="name">
+	<div id="error2" class="text-danger"></div><br>
+	<input type="phone" placeholder="your phone number."class="form-control" id="phone">
+	<div id="error3" class="text-danger"></div><br
+	<input type="surname" placeholder="your surname"class="form-control" id="surname">
+	<div id="error4" class="text-danger"></div><br
+
+	<div id="error5"class="text-danger"></div><br>
+
+	<button type="button"class="btn btn-dark" onclick="validateForm();">send message
+		
+	</button>
+</form>
+	
+</div> <!--end column-->
+<div class="col-md-6">
+
+	
+</div><!--end column-->
+	
+</section>
+
+<script type="text/javascript">
+	//js functions-categroize your program into blocks
+    // in programming-a function does some task
+    //below function validates ouer 1st form
+    // a function name is defined by user
+    //CamelCase:ValidateForm,AddNumbers
+    //snakeCase:ValidateForm,addNumbers
+    function validateForm()
+    {
+     //capture email,name,message store in respective variables
+     var email=document.getElementById("email").value;//capture email
+     var name=document.getElementById("name").value;
+     var name=document.getElementById("surname").value;
+     var name=document.getElementById("phone").value;
+     var message=document.getElementById("message").value;
+
+     //desicion making,if statements
+     if (email=="") {
+
+         document.getElementById("error1").innerHTML="enter your email";
+
+     }
+
+     if (name=="") {
+        document.getElementById("error2").innerHTML="enter your name";
+     }
+     if (phone=="") {
+        document.getElementById("error3").innerHTML="enter your number";
+     }
+     if (surname=="") {
+        document.getElementById("error4").innerHTML="enter your surname";
+     }
+
+     if (message=="") {
+        document.getElementById("error5").innerHTML="enter your messages";
+     }
+     
+
+    }//functions end here
+
+
+</script>
+
+
+
+
+</body>
+</html>
